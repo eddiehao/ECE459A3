@@ -1,0 +1,17 @@
+There are two apps here: the original app, in main.cpp, and my test
+harness, in test-harness.cpp.  You can generate the Makefile for the
+original app using:
+
+qmake-qt -o Makefile nm-morph.pro.
+
+Similarly, you can generate the Makefile for my test harness with:
+
+qmake-qt -o Makefile test-harness.pro.
+
+I've refactored code in the app from the original, which you can find
+at http://code.google.com/p/nm-morph.  It's not perfect; I know that
+there are some bugs. However, the test harness should not expose them.
+
+If you run the test harness, it will read the files "beaches.jpg" and
+"mountains.jpg" and morph them. Your task is to speed up the morphing
+algorithm.
