@@ -110,7 +110,10 @@ void Model::morph(int h, double VARA, double VARB, double VARP) {
             
             double ww[lines];
             QPoint pp[lines];
-            
+		   
+            QPoint sum(0.0, 0.0);
+            double wsum = 0;
+ 
             // for each line
             for(int k=0; k<lines; ++k) {
                 
@@ -148,18 +151,11 @@ void Model::morph(int h, double VARA, double VARB, double VARP) {
                 w /= (VARA + dist);
                 w = pow(w, VARB);
 
-                ww[k] = w;
-                pp[k] = p;
+                sum += w * p;
+                wsum += w;
             }
 
-            QPoint sum(0.0, 0.0);
-            double wsum = 0;
-            for(int k=0; k<lines; ++k) {
-                sum  += ww[k] * pp[k];
-                wsum += ww[k];
-            }
             sum /= wsum;
-
             QPoint X2 = X + sum;
 
             double y0, x0;

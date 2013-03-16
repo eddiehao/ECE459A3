@@ -10,12 +10,12 @@ TARGET = nm-morph
 #TEMPLATE = app
 
 SOURCES += main.cpp \
-    window.cpp \
+#    window.cpp \
     graphicsview.cpp \
     model.cpp
 
 HEADERS  += \
-    window.h \
+#    window.h \
     graphicsview.h \
     model.h
 
