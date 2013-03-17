@@ -108,9 +108,6 @@ void Model::morph(int h, double VARA, double VARB, double VARP) {
             QPoint X(i, j);
             double u, v;
             
-            double ww[lines];
-            QPoint pp[lines];
-		   
             QPoint sum(0.0, 0.0);
             double wsum = 0;
  
